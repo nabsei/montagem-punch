@@ -19,6 +19,14 @@ juce::AudioProcessorValueTreeState::ParameterLayout PunchProcessor::createParame
     return { params.begin(), params.end() };
 }
 
+bool PunchProcessor::isBusesLayoutSupported(const BusesLayout& layouts) const
+{
+    // fastEnv/slowEnv are fixed at 2 elements; restrict the negotiated
+    // layout to stereo so a host can never index them out of bounds.
+    return layouts.getMainInputChannelSet() == juce::AudioChannelSet::stereo()
+        && layouts.getMainOutputChannelSet() == juce::AudioChannelSet::stereo();
+}
+
 void PunchProcessor::prepareToPlay(double sampleRate, int)
 {
     lastSampleRate = sampleRate;

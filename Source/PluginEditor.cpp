@@ -46,7 +46,8 @@ PunchEditor::PunchEditor(PunchProcessor& p)
     brandLabel.setFont(juce::Font(juce::FontOptions(10.0f, juce::Font::plain)));
     addAndMakeVisible(brandLabel);
 
-    setResizable(false, false);
+    setResizable(true, true);
+    setResizeLimits(360, 280, 900, 700);
     setSize(480, 360);
 
     startTimerHz(30);
@@ -120,7 +121,7 @@ void PunchEditor::resized()
     amountValueLabel.setBounds(area.removeFromBottom(28));
     area.removeFromBottom(14); // clearance for the meter drawn in paint()
 
-    const int knobSize = 180;
+    const int knobSize = juce::jlimit(120, 260, juce::jmin(area.getWidth(), area.getHeight()) - 40);
     juce::Rectangle<int> knobArea(0, 0, knobSize, knobSize);
     knobArea.setCentre(area.getCentre());
     amountSlider.setBounds(knobArea);
