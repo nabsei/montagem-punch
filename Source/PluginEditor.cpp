@@ -40,7 +40,7 @@ PunchEditor::PunchEditor(PunchProcessor& p)
     amountSlider.onValueChange = [this] { updateValueLabel(); repaint(); };
     updateValueLabel();
 
-    brandLabel.setText("@montagem.punch", juce::dontSendNotification);
+    brandLabel.setText("Bumpin Audio", juce::dontSendNotification);
     brandLabel.setJustificationType(juce::Justification::centredRight);
     brandLabel.setColour(juce::Label::textColourId, PunchLookAndFeel::textDim.withAlpha(0.5f));
     brandLabel.setFont(juce::Font(juce::FontOptions(10.0f, juce::Font::plain)));
@@ -85,7 +85,7 @@ void PunchEditor::paint(juce::Graphics& g)
     g.fillAll();
 
     const float amount = (float)amountSlider.getValue();
-    const auto colour = PunchLookAndFeel::red.interpolatedWith(PunchLookAndFeel::green, amount);
+    const auto colour = PunchLookAndFeel::cyan.interpolatedWith(PunchLookAndFeel::magenta, amount);
 
     // Live transient meter: a horizontal track that fills based on the
     // processor's real-time detector reading -- unlike the Finisher/Widener

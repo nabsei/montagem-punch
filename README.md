@@ -105,6 +105,11 @@ funk automotivo / phonk production, in signal-chain order:
 - [Montagem Widener](https://github.com/nabsei/montagem-widener) — stereo width
 - **Montagem Punch** (this repo) — transient shaping
 
-Also by the same author: [Delta](https://github.com/nabsei/delta), a
-phase-cancellation null-test / difference-checker plugin (a different tool
-for a different audience — audio engineers doing verification work).
+Also from Bumpin Audio: [Yano Log](https://github.com/nabsei/yano-log),
+[Yano Finish](https://github.com/nabsei/yano-finish),
+[Yano Space](https://github.com/nabsei/yano-space),
+[Yano Swing](https://github.com/nabsei/yano-swing) — a one-knob amapiano
+log drum synth, finisher, space/width processor, and MIDI groove tool --
+and the Delta line for audio engineers, [Delta Zero](https://github.com/nabsei/delta-zero)
+(phase-cancellation null-test / difference-checker) and
+[Delta Blind](https://github.com/nabsei/delta-blind) (loudness-matched A/B compare).

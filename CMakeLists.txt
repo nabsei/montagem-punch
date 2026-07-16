@@ -10,7 +10,7 @@ else()
 endif()
 
 juce_add_plugin(MontagemPunch
-    COMPANY_NAME "montagem.punch"
+    COMPANY_NAME "Bumpin Audio"
     IS_SYNTH FALSE
     NEEDS_MIDI_INPUT FALSE
     NEEDS_MIDI_OUTPUT FALSE
